@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    color: white;
+    width: 400px;
+    padding: 20px;
+    text-align: center;
+    margin: 0;
+}
+
+#app {
+    background-color: #000000;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+h1 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #ff3333;
+    text-shadow: 0 0 5px #ff3333;
+    white-space: nowrap;
+}
+
+.animated-btn {
+    background-color: transparent;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    text-align: center;
+}
+
+.animated-btn .arrow {
+    display: inline-block;
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+}
+
+.animated-btn:hover .arrow {
+    animation: shootOff 0.5s forwards;
+}
+
+#quote {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+#quote-screen {
+    transition: opacity 0.5s ease;
+}
+
+#next-btn {
+    background-color: transparent;
+    border: none;
+    color: #ff3333;
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+@keyframes shootOff {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(150%);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-out;
+}
